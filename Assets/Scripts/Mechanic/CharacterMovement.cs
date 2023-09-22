@@ -48,6 +48,4 @@ public class CharacterMovement : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
     }
-
-    
 }

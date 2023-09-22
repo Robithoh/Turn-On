@@ -8,6 +8,8 @@ public class TriggerDoorController : MonoBehaviour
     // [SerializeField] private bool openTrigger = false;
     // [SerializeField] private bool closeTrigger = false;
     private bool isPlayerNear, isDoorOpen = false;
+
+    private KeySystem keys;
     
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Player")){
@@ -18,6 +20,10 @@ public class TriggerDoorController : MonoBehaviour
         if(other.CompareTag("Player")){
             isPlayerNear = false; 
         }
+    }
+
+    private void Start() {
+        keys = FindObjectOfType<KeySystem>();
     }
 
     // void Update(){
@@ -46,7 +52,8 @@ public class TriggerDoorController : MonoBehaviour
 
     void Update(){
         if(isPlayerNear){
-            if(Input.GetKeyDown(KeyCode.E)){
+            if(Input.GetKeyDown(KeyCode.E) && keys.Key1 == true)  
+            {
                 ToggleDoor();
             }
         }
