@@ -42,7 +42,7 @@ public class LampMechanic : MonoBehaviour
         }else
         {
             lamp1.GetComponent<Light>().enabled = false;
-            isLampOn = false;
+            isLampOn = true;
         }
     }
 
