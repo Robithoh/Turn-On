@@ -8,6 +8,7 @@ public class KeySystem : MonoBehaviour
 
     // Key
     public bool Key1;
+    private bool keyTaken = false;
 
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Key")){
@@ -30,8 +31,9 @@ public class KeySystem : MonoBehaviour
     {
         if (isPlayerNear)
         {
-            if (Input.GetKeyDown(KeyCode.E)) {
+            if (Input.GetKeyDown(KeyCode.E) && !keyTaken) {
                 Key1 = true;
+                keyTaken = true;
                 Destroy(GameObject.FindWithTag("Key"));
             }
         }
