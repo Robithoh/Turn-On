@@ -27,8 +27,8 @@ public class CharacterMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 move = new Vector3(horizontal, 0f, vertical).normalized;
 
-        if (move.magnitude >= 0.1f) {
-
+        if (move.magnitude >= 0.1f)
+        {
             float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
@@ -40,11 +40,14 @@ public class CharacterMovement : MonoBehaviour
     }
 
     // Lock Cursor Ketika Aplikasi di Run
-    private void OnApplicationFocus(bool focusStatus) {
-        if (focusStatus) {
+    private void OnApplicationFocus(bool focusStatus)
+    {
+        if (focusStatus) 
+        {
             Cursor.lockState = CursorLockMode.Locked;
         }
-        else {
+        else 
+        {
             Cursor.lockState = CursorLockMode.None;
         }
     }
