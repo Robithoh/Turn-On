@@ -6,6 +6,7 @@ public class LampMechanic : MonoBehaviour
 {
     public GameObject lamp1;
     public GameObject floatText;
+    public GameObject enemyDumm;
 
     private bool isPlayerNear, isLampOn;
 
@@ -16,7 +17,7 @@ public class LampMechanic : MonoBehaviour
         floatText.SetActive(false);
     }
 
-    private void OnTriggerEnter(Collider other) 
+    private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
@@ -33,18 +34,18 @@ public class LampMechanic : MonoBehaviour
         }
     }
 
-    private void ToggleLamp()
-    {
-        if(isLampOn)
-        {
-            lamp1.GetComponent<Light>().enabled = true;
-            isLampOn = false;
-        }else
-        {
-            lamp1.GetComponent<Light>().enabled = false;
-            isLampOn = true;
-        }
-    }
+    //private void ToggleLamp()
+    //{
+    //    if(isLampOn)
+    //    {
+    //        lamp1.GetComponent<Light>().enabled = false;
+    //        isLampOn = true;
+    //    }
+    //    else
+    //    {
+            
+    //    }
+    //}
 
     void Update()
     {
@@ -52,7 +53,10 @@ public class LampMechanic : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
-                ToggleLamp();
+                //ToggleLamp();
+                lamp1.GetComponent<Light>().enabled = true;
+                isLampOn = false;
+                Destroy(enemyDumm);
             }
         }
     }
