@@ -16,9 +16,9 @@ public class LampMechanic : MonoBehaviour
         floatText.SetActive(false);
     }
 
-    private void OnTriggerEnter(Collider other) 
+    private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             isPlayerNear = true;
             floatText.SetActive(true);
@@ -26,33 +26,35 @@ public class LampMechanic : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            isPlayerNear = false; 
+            isPlayerNear = false;
             floatText.SetActive(false);
         }
     }
 
-    private void ToggleLamp()
-    {
-        if(isLampOn)
-        {
-            lamp1.GetComponent<Light>().enabled = true;
-            isLampOn = false;
-        }else
-        {
-            lamp1.GetComponent<Light>().enabled = false;
-            isLampOn = true;
-        }
-    }
+    //private void ToggleLamp()
+    //{
+    //    if(isLampOn)
+    //    {
+    //        lamp1.GetComponent<Light>().enabled = false;
+    //        isLampOn = true;
+    //    }
+    //    else
+    //    {
+
+    //    }
+    //}
 
     void Update()
     {
-        if(isPlayerNear)
+        if (isPlayerNear)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                ToggleLamp();
+                //ToggleLamp();
+                lamp1.GetComponent<Light>().enabled = true;
+                isLampOn = false;
             }
         }
     }

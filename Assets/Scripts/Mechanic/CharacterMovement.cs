@@ -8,13 +8,15 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private CharacterController characterController;
     public float speed;
-
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
 
     // Transform Camera Position
     [SerializeField] 
     private Transform cameraTransform;
+
+    // Animator Player
+    public Animator anim;
 
     // Update is called once per frame
     void Update()
@@ -35,6 +37,11 @@ public class CharacterMovement : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             characterController.Move(moveDir.normalized * speed * Time.deltaTime);
+            anim.SetBool("isWalk", true);
+        }
+        else
+        {
+            anim.SetBool("isWalk", false);
         }
         // move = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * move;
     }
