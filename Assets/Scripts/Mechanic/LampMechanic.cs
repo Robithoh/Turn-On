@@ -7,6 +7,7 @@ public class LampMechanic : MonoBehaviour
     public GameObject lamp1;
     public GameObject floatText;
     public GameObject enemyDumm;
+    public int lampCount;
 
     private bool isPlayerNear, isLampOn;
 
@@ -57,6 +58,7 @@ public class LampMechanic : MonoBehaviour
                 lamp1.GetComponent<Light>().enabled = true;
                 isLampOn = false;
                 Destroy(enemyDumm);
+                lampCount--;
             }
         }
     }
