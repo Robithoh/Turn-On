@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeySystem : MonoBehaviour
 {
     private bool isPlayerNear;
+    public Text keyNotification;
 
     // Key
     public bool Key1;
@@ -19,11 +21,6 @@ public class KeySystem : MonoBehaviour
             isPlayerNear = false; 
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -32,8 +29,21 @@ public class KeySystem : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E)) {
                 Key1 = true;
+                ShowKeyInfo();
                 Destroy(GameObject.FindWithTag("Key"));
             }
         }
+    }
+
+    void ShowKeyInfo()
+    {
+        keyNotification.text = "Key Collected";
+
+        Invoke("HideKeyInfo", 3f);
+    }
+
+    void HideKeyInfo()
+    {
+        keyNotification.text = "";
     }
 }

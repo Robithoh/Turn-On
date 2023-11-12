@@ -10,7 +10,7 @@ public class TriggerDoorController : MonoBehaviour
     private bool isPlayerNear, isDoorOpen = false;
 
     private KeySystem keys;
-    
+
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Player")){
             isPlayerNear = true; 
