@@ -11,8 +11,7 @@ public class Objective : MonoBehaviour
     public Sprite fullStar;
     public Sprite emptyStar;
     public LampMechanic lampMechanic; // Referensi ke skrip LampMechanic
-    private bool canIncrement = true;
-    private bool canDecrement = true;
+    public bool isPlayerNear = false;
     // Update is called once per frame
     void Update()
     {
@@ -33,21 +32,27 @@ public class Objective : MonoBehaviour
         }
 
         // Ubah kondisi untuk mengatur numOfStars
-        if (lampMechanic.lampCount == 0 && canIncrement)
+        if (hearts == 2)
         {
-            numOfStars = Mathf.Min(numOfStars + 1, 2);
-            canIncrement = false;
-            canDecrement = true;
+            numOfStars = 3;
         }
-        else if (hearts == 2 && canIncrement)
+        else if (lampMechanic.lampCount == 0)
         {
-            numOfStars = Mathf.Min(numOfStars + 1, 2);
-            canIncrement = false;
-            canDecrement = true;
+            numOfStars = 2;
         }
-        else if (!canDecrement)
+        else if (isPlayerNear == true)
+        { 
+            numOfStars = 1;
+        }
+        else
         {
-            canIncrement = true;
+            numOfStars = 0;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if(other.CompareTag("End")){
+            isPlayerNear = true;
         }
     }
 }
