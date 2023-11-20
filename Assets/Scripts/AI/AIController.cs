@@ -61,15 +61,16 @@ public class AIController : MonoBehaviour
  
     private void Update()
     {
-        EnviromentView();                       //  Check whether or not the player is in the enemy's field of vision
-
-        anim.SetBool("isWalk", true);
+        EnviromentView();                         //  Check whether or not the player is in the enemy's field of vision
+        anim.SetBool("isWalk", false);
+        
         if (!m_IsPatrol)
         {
             Chasing();
         }
         else
         {
+            anim.SetBool("isWalk", true);
             Patroling();
         }
     }
