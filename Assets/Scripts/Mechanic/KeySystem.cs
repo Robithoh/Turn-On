@@ -34,10 +34,9 @@ public class KeySystem : MonoBehaviour
             }
         }
     }
-
     void ShowKeyInfo()
     {
-        keyNotification.text = "Key Collected";
+        keyNotification.text = "Bathroom's Key Collected";
 
         Invoke("HideKeyInfo", 3f);
     }
