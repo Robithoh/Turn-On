@@ -16,6 +16,7 @@ public class KeySystem : MonoBehaviour
             isPlayerNear = true; 
         }
     }
+
     private void OnTriggerExit(Collider other) {
         if(other.CompareTag("Key")){
             isPlayerNear = false; 

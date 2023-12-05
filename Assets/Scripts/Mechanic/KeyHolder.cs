@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeyHolder : MonoBehaviour
 {
     private List<Key.KeyType> keyList;
+    public Text keyNotification;
+    bool isPlayerNear = false;
 
     private void Awake()
     {
@@ -14,6 +17,8 @@ public class KeyHolder : MonoBehaviour
     public void AddKey(Key.KeyType keyType)
     {
         Debug.Log("Added Key: " + keyType);
+        keyNotification.text = "Added " + keyType.ToString();
+        Invoke("HideKeyInfo", 3f);
         keyList.Add(keyType);
     }
 
@@ -29,6 +34,7 @@ public class KeyHolder : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //isPlayerNear = true;
         Key key = other.GetComponent<Key>();
         if (key != null)
         {
@@ -42,8 +48,38 @@ public class KeyHolder : MonoBehaviour
             if (ContainsKey(keyDoor.GetKeyType()))
             {
                 RemoveKey(keyDoor.GetKeyType());
-                keyDoor.OpenDoor();
+                keyDoor.ToggleDoor();
+                keyDoor.doorInfoFalse();
+                Destroy(other);
+            }
+            else
+            {
+                keyDoor.doorInfoTrue();
             }
         }
+    }
+
+    //private void Update()
+    //{
+    //    if(isPlayerNear)
+    //    {
+    //        if(Input.GetKeyDown(KeyCode.E))
+    //        {
+    //            checkKey();
+    //            checkDoor();
+    //        }
+    //    }
+    //}
+
+    private void OnTriggerExit(Collider other)
+    {
+        isPlayerNear = false;
+        KeyDoor keyDoor = other.GetComponent<KeyDoor>();
+        keyDoor.doorInfoFalse();
+    }
+
+    void HideKeyInfo()
+    {
+        keyNotification.text = "";
     }
 }
