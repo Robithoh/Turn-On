@@ -39,10 +39,12 @@ public class Obj_Anim : MonoBehaviour
         }
         else if (lampMechanic.lampCount == 0)
         {
+            Debug.Log("Lampu mati");
             mSpritesPath = "bintang/bintang2";
         }
-        else
+        else if (hearts <= 1)
         { 
+            Debug.Log("Nyawa habis");
             mSpritesPath = "bintang/bintang1";
         }
 
