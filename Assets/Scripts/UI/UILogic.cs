@@ -10,11 +10,13 @@ public class UILogic : MonoBehaviour
     public GameObject panelGameOver;
     public GameObject displayHealth;
     public GameObject displayNotif;
-    HealthSystem healthSystem;
+    public HealthSystem healthSystem;
 
     private void Update()
     {
         PanelPause();
+
+        PanelGameOver();
     }
     public void PanelPause()
     {
