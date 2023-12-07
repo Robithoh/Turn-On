@@ -49,7 +49,8 @@ public class KeyHolder : MonoBehaviour
             currentKeyDoor = keyDoor; // Simpan referensi ke pintu yang berdekatan
             if (ContainsKey(keyDoor.GetKeyType()))
             {
-                keyDoor.doorInfoFalse();
+                keyDoor.doorReady();
+                Invoke("HideKeyInfo", 3f);
                 Destroy(other);
             }
             else
@@ -90,6 +91,7 @@ public class KeyHolder : MonoBehaviour
 
         if (currentKeyDoor != null)
         {
+            
             currentKeyDoor.ToggleDoor(); // Panggil metode untuk membuka pintu
             RemoveKey(currentKeyDoor.GetKeyType()); // Hapus kunci dari daftar pemain
         }

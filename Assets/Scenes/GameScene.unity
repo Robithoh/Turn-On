@@ -2514,8 +2514,8 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.9716981, g: 0.9582985, b: 0.700356, a: 1}
-  m_Intensity: 2
-  m_Range: 5.3
+  m_Intensity: 2.7
+  m_Range: 7
   m_SpotAngle: 66.9
   m_InnerSpotAngle: 4
   m_CookieSize: 10
@@ -2696,7 +2696,7 @@ Transform:
   m_GameObject: {fileID: 899058490}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.466728, y: 2.555, z: -18.49759}
+  m_LocalPosition: {x: 21.466732, y: 2.555, z: -18.49759}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3734,7 +3734,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217253337}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.005057785, y: 0.9892115, z: -0.1421111, w: 0.035206396}
+  m_LocalRotation: {x: 0.0050576944, y: 0.98921156, z: -0.1421111, w: 0.035205774}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5043,7 +5043,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484544839}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.005697335, y: 0.98646295, z: -0.16008084, w: 0.035108574}
+  m_LocalRotation: {x: 0.0056972355, y: 0.98646295, z: -0.16008084, w: 0.03510796}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5703,7 +5703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1742225028
 Transform:
   m_ObjectHideFlags: 0
@@ -6235,7 +6235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880763580}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.004418257, y: 0.9916268, z: -0.124141976, w: 0.03529235}
+  m_LocalRotation: {x: 0.0044181785, y: 0.99162686, z: -0.12414198, w: 0.035291728}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6828,8 +6828,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989555197}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0050577866, y: 0.9892115, z: -0.14211112, w: 0.035206396}
-  m_LocalPosition: {x: 21.466728, y: 2.555, z: -18.49759}
+  m_LocalRotation: {x: 0.0050576963, y: 0.9892115, z: -0.14211114, w: 0.035205774}
+  m_LocalPosition: {x: 21.466732, y: 2.555, z: -18.49759}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17977,6 +17977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myHiddenDoor: {fileID: 7689176937420391088}
+  keyNotification: {fileID: 1289008297}
 --- !u!65 &7689176937420391091
 BoxCollider:
   m_ObjectHideFlags: 0

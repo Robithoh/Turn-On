@@ -20,6 +20,11 @@ public class KeyDoor : MonoBehaviour
         keyNotification.text = keyType.ToString() + " needed";
     }
 
+    public void doorReady()
+    {
+        keyNotification.text = "Press E to open";
+    }
+
     public void doorInfoFalse()
     {
         keyNotification.text = "";
