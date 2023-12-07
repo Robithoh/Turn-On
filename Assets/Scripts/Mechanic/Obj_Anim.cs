@@ -14,8 +14,7 @@ public class Obj_Anim : MonoBehaviour
     private int nCurrentFrame = 0;
 
     // Logika untuk mengatur bintang
-    public HealthSystem HealthSystem;
-    public LampMechanic lampMechanic; // Referensi ke skrip LampMechanic
+    public HealthSystem HealthSystem; // Referensi ke skrip LampMechanic
     public bool isPlayerNear = false;
 
     private string mSpritesPath;
@@ -30,14 +29,14 @@ public class Obj_Anim : MonoBehaviour
 
     void Obj_Cond()
     {
-        int hearts = HealthSystem.numOfHearts;
-        
+        int hearts = HealthSystem.health;
+
         // Ubah kondisi untuk mengatur numOfStars
         if (hearts == 2)
         {
             mSpritesPath = "bintang/bintang3";
         }
-        else if (lampMechanic.lampCount == 0)
+        else if (CharacterMovement.instance.lampCount == 0)
         {
             Debug.Log("Lampu mati");
             mSpritesPath = "bintang/bintang2";

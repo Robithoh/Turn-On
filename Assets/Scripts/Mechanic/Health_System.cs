@@ -34,7 +34,7 @@ public class HealthSystem : MonoBehaviour
             TakeDamage(1); // Panggil fungsi TakeDamage dan kurangi 1 nyawa
 
             // Hancurkan musuh setelah menabrak pemain
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
         }
     }
 

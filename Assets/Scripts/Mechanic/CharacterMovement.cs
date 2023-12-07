@@ -10,6 +10,7 @@ public class CharacterMovement : MonoBehaviour
     private CharacterController characterController;
     public float speed;
     public float turnSmoothTime = 0.1f;
+    public int lampCount;
     float turnSmoothVelocity;
 
     // Transform Camera Position
@@ -23,6 +24,14 @@ public class CharacterMovement : MonoBehaviour
     // Player Audio
     public AudioClip StepAudio;
     AudioSource PlayerAudio;
+
+    public static CharacterMovement instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+    }
 
     private void Start()
     {

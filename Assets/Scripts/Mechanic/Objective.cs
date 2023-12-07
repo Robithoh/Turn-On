@@ -10,7 +10,7 @@ public class Objective : MonoBehaviour
     public Image[] Stars;
     public Sprite fullStar;
     public Sprite emptyStar;
-    public LampMechanic lampMechanic; // Referensi ke skrip LampMechanic
+    //public LampMechanic lampMechanic; // Referensi ke skrip LampMechanic
     public bool isPlayerNear = false;
     // Update is called once per frame
     void Update()
@@ -36,7 +36,7 @@ public class Objective : MonoBehaviour
         {
             numOfStars = 3;
         }
-        else if (lampMechanic.lampCount == 0)
+        else if (CharacterMovement.instance.lampCount == 0)
         {
             numOfStars = 2;
         }
