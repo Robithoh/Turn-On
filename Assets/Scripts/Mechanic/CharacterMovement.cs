@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    [Header("Player Setting")]
     // Character Controller
     [SerializeField]
     private CharacterController characterController;
@@ -12,19 +13,25 @@ public class CharacterMovement : MonoBehaviour
     float turnSmoothVelocity;
 
     // Transform Camera Position
-    [SerializeField] 
+    [SerializeField]
     private Transform cameraTransform;
 
     // Animator Player
-    // public Animator anim;
+    public Animator anim;
+
+    [Header("SFX Player")]
+    // Player Audio
+    public AudioClip StepAudio;
+    AudioSource PlayerAudio;
+
+    private void Start()
+    {
+        PlayerAudio = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        // Movement Character
-        // Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        // characterController.Move(move * Time.deltaTime * speed);
-
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 move = new Vector3(horizontal, 0f, vertical).normalized;
@@ -37,25 +44,32 @@ public class CharacterMovement : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             characterController.Move(moveDir.normalized * speed * Time.deltaTime);
-            // anim.SetBool("isWalk", true);
+            anim.SetBool("isWalk", true);
         }
         else
         {
-            // anim.SetBool("isWalk", false);
+            anim.SetBool("isWalk", false);
+            float targetAngle = cameraTransform.eulerAngles.y;
+            transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
         }
-        // move = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * move;
     }
 
     // Lock Cursor Ketika Aplikasi di Run
     private void OnApplicationFocus(bool focusStatus)
     {
-        if (focusStatus) 
+        if (focusStatus)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
-        else 
+        else
         {
             Cursor.lockState = CursorLockMode.None;
         }
+    }
+
+    public void step()
+    {
+        PlayerAudio.clip = StepAudio;
+        PlayerAudio.Play();
     }
 }

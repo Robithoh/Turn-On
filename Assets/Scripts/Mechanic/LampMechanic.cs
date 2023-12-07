@@ -4,45 +4,48 @@ using UnityEngine;
 
 public class LampMechanic : MonoBehaviour
 {
-    public GameObject lamp;
-    //public GameObject floatText;
-    public GameObject ghost;
+    public GameObject lamp1;
+    public GameObject floatText;
+    public GameObject enemyDumm;
+    public int lampCount;
 
-    private bool isPlayerNear;
+    private bool isPlayerNear, isLampOn;
 
     // Start is called before the first frame update
     void Start()
     {
-        lamp.SetActive(false);
-        //floatText.SetActive(false);
+        lamp1.GetComponent<Light>().enabled = false;
+        floatText.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             isPlayerNear = true;
-            //floatText.SetActive(true);
+            floatText.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            isPlayerNear = false; 
-            //floatText.SetActive(false);
+            isPlayerNear = false;
+            floatText.SetActive(false);
         }
     }
 
     void Update()
     {
-        if(isPlayerNear)
+        if (isPlayerNear)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 //ToggleLamp();
-                lamp.SetActive(true);
-                Destroy(ghost);
+                lamp1.GetComponent<Light>().enabled = true;
+                isLampOn = false;
+                Destroy(enemyDumm);
+                lampCount--;
             }
         }
     }
