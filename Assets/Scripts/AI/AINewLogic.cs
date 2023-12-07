@@ -25,6 +25,7 @@ public class AINewLogic : MonoBehaviour
     public AudioClip EnemyJumpscare;
     public AudioClip EnemyChase;
     AudioSource EnemyAudio;
+    bool alreadyPlayed = false;
 
     private void Start()
     {
@@ -47,6 +48,7 @@ public class AINewLogic : MonoBehaviour
             Light.SetActive(true);
             if (DistancetoTarget <= agent.stoppingDistance + 1f)
             {
+                alreadyPlayed = false;
                 JumpScare();
             }
             else
@@ -92,8 +94,12 @@ public class AINewLogic : MonoBehaviour
     {
         Transisi.SetBool("Enter", true);
         FaceTarget(target.position);
-        EnemyAudio.PlayOneShot(EnemyJumpscare);
-        Debug.Log("Kaget");
+        if (!alreadyPlayed)
+        {
+            EnemyAudio.PlayOneShot(EnemyJumpscare);
+            Debug.Log("Kaget");
+            alreadyPlayed = true;
+        }
     }
 
     public void JumpScare()
@@ -101,8 +107,11 @@ public class AINewLogic : MonoBehaviour
         Debug.Log("Jumpscare");
         EnemyAudio.Stop();
         jumpScarePanel.SetActive(true);
-        EnemyAudio.clip = EnemyChase;
-        EnemyAudio.Play();
+        if (!alreadyPlayed)
+        {
+            EnemyAudio.PlayOneShot(EnemyChase);
+            alreadyPlayed = true;
+        }
         StartCoroutine(disablePanel());
     }
 
