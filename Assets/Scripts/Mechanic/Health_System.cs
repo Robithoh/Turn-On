@@ -7,10 +7,10 @@ public class HealthSystem : MonoBehaviour
 {
     public int health; // Jumlah nyawa awal
     public int numOfHearts;
-
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+    public GameObject panel_gameover;
 
     void Update() {
         for (int i = 0; i < hearts.Length; i++) {
@@ -43,7 +43,13 @@ public class HealthSystem : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            // Player mati, tambahkan kode sesuai kebutuhan
+            StartCoroutine(disablePanel());
         }
+    }
+
+    IEnumerator disablePanel()
+    {
+        yield return new WaitForSeconds(2);
+        panel_gameover.SetActive(true);
     }
 }
