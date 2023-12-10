@@ -11,6 +11,10 @@ public class UILogic : MonoBehaviour
     public GameObject displayHealth;
     public GameObject displayNotif;
 
+    public GameObject panelMainMenu;
+    public GameObject panelCredit;
+    public GameObject panelSetting;
+
     private void Update()
     {
         PanelPause();
@@ -40,22 +44,28 @@ public class UILogic : MonoBehaviour
 
     public void Home()
     {
-        SceneManager.LoadScene("PlayScene");
+        panelMainMenu.SetActive(true);
+        panelSetting.SetActive(false);
+        panelCredit.SetActive(false);
     }
 
     public void Setting()
     {
-        SceneManager.LoadScene("Settings");
+        panelSetting.SetActive(true);
+        panelMainMenu.SetActive(false);
     }
 
     public void Credits()
     {
-        SceneManager.LoadScene("Credit");
+        panelCredit.SetActive(true);
+        panelMainMenu.SetActive(false);
     }
 
     public void RestartGame()
     {
         SceneManager.LoadScene("GameScene");
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void QuitGame()
