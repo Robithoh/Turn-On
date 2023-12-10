@@ -2764,6 +2764,9 @@ MonoBehaviour:
   panelGameOver: {fileID: 0}
   displayHealth: {fileID: 772367168}
   displayNotif: {fileID: 1289008295}
+  panelMainMenu: {fileID: 0}
+  panelCredit: {fileID: 0}
+  panelSetting: {fileID: 0}
 --- !u!1001 &726529509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4953,7 +4956,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 714983760}
         m_TargetAssemblyTypeName: UILogic, Assembly-CSharp
-        m_MethodName: Home
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7096,7 +7099,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484544839}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0056970804, y: 0.986463, z: -0.16008088, w: 0.03510699}
+  m_LocalRotation: {x: 0.0056970785, y: 0.986463, z: -0.16008088, w: 0.035106987}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9036,7 +9039,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 714983760}
         m_TargetAssemblyTypeName: UILogic, Assembly-CSharp
-        m_MethodName: Home
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

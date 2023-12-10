@@ -73,4 +73,9 @@ public class UILogic : MonoBehaviour
         Application.Quit();
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("PlayScene");
+    }
+
 }
