@@ -36,6 +36,10 @@ public class HealthSystem : MonoBehaviour
             // Hancurkan musuh setelah menabrak pemain
             //Destroy(other.gameObject);
         }
+        if (other.CompareTag("Kunti"))
+        {
+            TakeDamage(1);
+        }
     }
 
     void TakeDamage(int damage)

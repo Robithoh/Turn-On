@@ -26,6 +26,7 @@ public class AINewLogic : MonoBehaviour
     public AudioClip EnemyChase;
     AudioSource EnemyAudio;
     bool alreadyPlayed = false;
+    bool AlreadyPlay = false;
 
     private void Start()
     {
@@ -46,23 +47,22 @@ public class AINewLogic : MonoBehaviour
         {
             Show();
             Light.SetActive(true);
-            if (DistancetoTarget <= agent.stoppingDistance + 1f)
+            if (DistancetoTarget <= agent.stoppingDistance)
             {
-                alreadyPlayed = false;
                 JumpScare();
             }
             else
             {
-
-            }            
+                Debug.Log("Stop");
+            }
         }
         else if (DistancetoTarget <= ChaseRange && gameObject.tag != "Kunti")
         {
             FaceTarget(target.position);
             if (DistancetoTarget > agent.stoppingDistance + 2f)
-            {                
+            {
                 ChaseTarget();
-
+                Debug.Log("Ngejer");
             }
             else if (DistancetoTarget <= agent.stoppingDistance)
             {
@@ -71,16 +71,16 @@ public class AINewLogic : MonoBehaviour
         }
         else if (DistancetoTarget >= ChaseRange + 3f && gameObject.tag != "Kunti")
         {
-
+            Debug.Log("Balik");
             Light.SetActive(false);
             agent.SetDestination(DefaultPosition);
             FaceTarget(DefaultPosition);
             if (DistancetoDefault <= agent.stoppingDistance)
             {
-
+                Debug.Log("Time to stop");
                 anim.SetBool("Run", false);
             }
-        }        
+        }
     }
 
     private void FaceTarget(Vector3 destination)
@@ -105,14 +105,15 @@ public class AINewLogic : MonoBehaviour
     public void JumpScare()
     {
         Debug.Log("Jumpscare");
-        EnemyAudio.Stop();
         jumpScarePanel.SetActive(true);
-        if (!alreadyPlayed)
+        if (!AlreadyPlay)
         {
+            EnemyAudio.Stop();
             EnemyAudio.PlayOneShot(EnemyChase);
-            alreadyPlayed = true;
+            AlreadyPlay = true;
         }
         StartCoroutine(disablePanel());
+        // return;
     }
 
     public void ChaseTarget()
@@ -120,15 +121,19 @@ public class AINewLogic : MonoBehaviour
         Light.SetActive(true);
         agent.SetDestination(target.position);
         anim.SetBool("Run", true);
-        EnemyAudio.PlayOneShot(EnemyChase);
+        if (!alreadyPlayed)
+        {
+            EnemyAudio.PlayOneShot(EnemyChase);
+            alreadyPlayed = true;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
-        {            
+        {
             EnemyAudio.Stop();
-            Debug.Log("Jumpscare");            
+            Debug.Log("Jumpscare");
             EnemyAudio.PlayOneShot(EnemyJumpscare);
             jumpScarePanel.SetActive(true);
             StartCoroutine(disablePanel());
@@ -147,7 +152,7 @@ public class AINewLogic : MonoBehaviour
     {
         int EnemySet = 0;
         for (int i = 0; i < EnemyCount; i++)
-        {            
+        {
             int x = Random.Range(-19, 20);
             int z = Random.Range(-20, -36);
             if (EnemySet != EnemyCount)

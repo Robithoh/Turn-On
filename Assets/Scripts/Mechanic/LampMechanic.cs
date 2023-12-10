@@ -5,7 +5,7 @@ using UnityEngine;
 public class LampMechanic : MonoBehaviour
 {
     public GameObject lamp;
-    //public GameObject enemyDumm;
+    public List<GameObject> enemy;
 
     private bool isPlayerNear;
 
@@ -38,8 +38,12 @@ public class LampMechanic : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 lamp.SetActive(true);
-                //Destroy(enemyDumm);
-                CharacterMovement.instance.lampCount--;
+                for (int letterIndex = 0; letterIndex < enemy.Count; letterIndex++)
+                {
+                    Destroy(enemy[letterIndex]) ;
+                    CharacterMovement.instance.lampCount--;
+                }
+                    
             }
         }
     }

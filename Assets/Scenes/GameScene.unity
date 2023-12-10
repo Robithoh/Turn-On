@@ -691,6 +691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lamp: {fileID: 728475657}
+  enemy: []
 --- !u!65 &309370292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2652,6 +2653,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1606911144}
   - {fileID: 1830217076}
   - {fileID: 1256864158}
   - {fileID: 1782829601}
@@ -2659,7 +2661,6 @@ RectTransform:
   - {fileID: 1289008296}
   - {fileID: 1215102632}
   - {fileID: 659698970}
-  - {fileID: 1606911144}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2680,7 +2681,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelPause: {fileID: 1606911143}
-  panelGameOver: {fileID: 0}
   displayHealth: {fileID: 772367168}
   displayNotif: {fileID: 1289008295}
 --- !u!1001 &726529509
@@ -3147,7 +3147,7 @@ Transform:
   m_GameObject: {fileID: 741169848}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 477.45, y: 880.5, z: 93.32}
+  m_LocalPosition: {x: 497.58, y: 887.48, z: 111.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3264,7 +3264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 15
   target: {fileID: 928455149}
-  ChaseRange: 3.5
+  ChaseRange: 2.5
   anim: {fileID: 741169853}
   Transisi: {fileID: 5866666020564360023}
   EnemyKunti: {fileID: 741169848}
@@ -7289,6 +7289,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lamp: {fileID: 562737235}
+  enemy:
+  - {fileID: 1012876501}
+  - {fileID: 741169848}
 --- !u!1 &1591274547
 GameObject:
   m_ObjectHideFlags: 0
@@ -7483,7 +7486,7 @@ GameObject:
   - component: {fileID: 1686305044}
   m_Layer: 0
   m_Name: Tuyul_1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7497,7 +7500,7 @@ Transform:
   m_GameObject: {fileID: 1686305042}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 490.0401, y: 887.82574, z: 100.8}
+  m_LocalPosition: {x: 477.33, y: 887.407, z: 112.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7614,7 +7617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 15
   target: {fileID: 928455149}
-  ChaseRange: 7
+  ChaseRange: 3.27
   anim: {fileID: 1686305047}
   Transisi: {fileID: 0}
   EnemyKunti: {fileID: 0}
@@ -7929,7 +7932,7 @@ Transform:
   m_GameObject: {fileID: 1711014537}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.19, y: 0, z: -2.2}
+  m_LocalPosition: {x: -35.75, y: 0, z: -7.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
