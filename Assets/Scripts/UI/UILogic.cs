@@ -40,7 +40,17 @@ public class UILogic : MonoBehaviour
 
     public void Home()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("PlayScene");
+    }
+
+    public void Setting()
+    {
+        SceneManager.LoadScene("Settings");
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credit");
     }
 
     public void RestartGame()
