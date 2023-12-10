@@ -32,16 +32,16 @@ public class Obj_Anim : MonoBehaviour
         int hearts = HealthSystem.health;
 
         // Ubah kondisi untuk mengatur numOfStars
-        if (hearts == 2)
+        if (hearts == 2 && CharacterMovement.instance.lampCount == 0)
         {
             mSpritesPath = "bintang/bintang3";
         }
-        else if (CharacterMovement.instance.lampCount == 0 )
+        else if (CharacterMovement.instance.lampCount == 0 && hearts == 1)
         {
             Debug.Log("Lampu mati");
             mSpritesPath = "bintang/bintang2";
         }
-        else if (hearts <= 1)
+        else
         { 
             Debug.Log("Nyawa habis");
             mSpritesPath = "bintang/bintang1";
