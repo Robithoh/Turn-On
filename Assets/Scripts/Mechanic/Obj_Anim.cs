@@ -36,7 +36,7 @@ public class Obj_Anim : MonoBehaviour
         {
             mSpritesPath = "bintang/bintang3";
         }
-        else if (CharacterMovement.instance.lampCount == 0)
+        else if (CharacterMovement.instance.lampCount == 0 )
         {
             Debug.Log("Lampu mati");
             mSpritesPath = "bintang/bintang2";

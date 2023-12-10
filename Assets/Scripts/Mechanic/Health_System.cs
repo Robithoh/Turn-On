@@ -51,5 +51,7 @@ public class HealthSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         panel_gameover.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

@@ -53,7 +53,7 @@ public class AINewLogic : MonoBehaviour
             }
             else
             {
-                Debug.Log("Stop");
+
             }            
         }
         else if (DistancetoTarget <= ChaseRange && gameObject.tag != "Kunti")
@@ -62,7 +62,7 @@ public class AINewLogic : MonoBehaviour
             if (DistancetoTarget > agent.stoppingDistance + 2f)
             {                
                 ChaseTarget();
-                Debug.Log("Ngejer");
+
             }
             else if (DistancetoTarget <= agent.stoppingDistance)
             {
@@ -71,13 +71,13 @@ public class AINewLogic : MonoBehaviour
         }
         else if (DistancetoTarget >= ChaseRange + 3f && gameObject.tag != "Kunti")
         {
-            Debug.Log("Balik");
+
             Light.SetActive(false);
             agent.SetDestination(DefaultPosition);
             FaceTarget(DefaultPosition);
             if (DistancetoDefault <= agent.stoppingDistance)
             {
-                Debug.Log("Time to stop");
+
                 anim.SetBool("Run", false);
             }
         }        

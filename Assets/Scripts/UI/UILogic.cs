@@ -10,13 +10,10 @@ public class UILogic : MonoBehaviour
     public GameObject panelGameOver;
     public GameObject displayHealth;
     public GameObject displayNotif;
-    public HealthSystem healthSystem;
 
     private void Update()
     {
         PanelPause();
-
-        PanelGameOver();
     }
     public void PanelPause()
     {
@@ -41,16 +38,19 @@ public class UILogic : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void RestartGame()
+    public void Home()
     {
         SceneManager.LoadScene("");
     }
 
-    public void PanelGameOver()
+    public void RestartGame()
     {
-        if(healthSystem.health == 0)
-        {
-            panelGameOver.SetActive(true);
-        }
+        SceneManager.LoadScene("GameScene");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
