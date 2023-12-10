@@ -345,7 +345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 323870325}
   - component: {fileID: 323870328}
-  - component: {fileID: 323870327}
+  - component: {fileID: 323870329}
   - component: {fileID: 323870326}
   m_Layer: 5
   m_Name: ButtonCredit
@@ -370,8 +370,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 126, y: -12}
-  m_SizeDelta: {x: 196.9833, y: 108.4071}
+  m_AnchoredPosition: {x: 139.2, y: -19.2}
+  m_SizeDelta: {x: 139.3915, y: 26.402}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &323870326
 MonoBehaviour:
@@ -413,7 +413,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 323870327}
+  m_TargetGraphic: {fileID: 323870329}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -441,7 +441,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &323870327
+--- !u!222 &323870328
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323870324}
+  m_CullTransparentMesh: 1
+--- !u!114 &323870329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -461,7 +469,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: af87362b5fa95304a8c85b26615eea0f, type: 3}
+  m_Sprite: {fileID: 2017234614, guid: af87362b5fa95304a8c85b26615eea0f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -471,14 +479,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &323870328
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323870324}
-  m_CullTransparentMesh: 1
 --- !u!1 &811808416
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 811808417}
   - component: {fileID: 811808420}
-  - component: {fileID: 811808419}
+  - component: {fileID: 811808421}
   - component: {fileID: 811808418}
   m_Layer: 5
   m_Name: ButtonExit
@@ -514,8 +514,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 103, y: -109}
-  m_SizeDelta: {x: 196.9833, y: 108.4071}
+  m_AnchoredPosition: {x: 111.11, y: -103.2}
+  m_SizeDelta: {x: 83.2132, y: 26.2594}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &811808418
 MonoBehaviour:
@@ -557,7 +557,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 811808419}
+  m_TargetGraphic: {fileID: 811808421}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -573,7 +573,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &811808419
+--- !u!222 &811808420
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811808416}
+  m_CullTransparentMesh: 1
+--- !u!114 &811808421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -593,7 +601,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 96bbe8025a029ed49a3c1a24333f9090, type: 3}
+  m_Sprite: {fileID: -832837932, guid: 96bbe8025a029ed49a3c1a24333f9090, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -603,14 +611,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &811808420
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 811808416}
-  m_CullTransparentMesh: 1
 --- !u!1 &937574512
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +977,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8048a72204832fb4f935ff5102c6167a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c1a5b6590a67d4b4bbc443d72a4e514f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1107,8 +1107,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1479257359}
   - component: {fileID: 1479257362}
-  - component: {fileID: 1479257361}
   - component: {fileID: 1479257360}
+  - component: {fileID: 1479257363}
   m_Layer: 5
   m_Name: ButtonSettings
   m_TagString: Untagged
@@ -1132,8 +1132,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 149, y: -56}
-  m_SizeDelta: {x: 196.9833, y: 108.4071}
+  m_AnchoredPosition: {x: 158.44, y: -61.5}
+  m_SizeDelta: {x: 177.8699, y: 26.4099}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479257360
 MonoBehaviour:
@@ -1175,7 +1175,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1479257361}
+  m_TargetGraphic: {fileID: 1479257363}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -1203,7 +1203,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1479257361
+--- !u!222 &1479257362
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479257358}
+  m_CullTransparentMesh: 1
+--- !u!114 &1479257363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1223,7 +1231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f56db59efa1ca4c4a81e7730041bdee5, type: 3}
+  m_Sprite: {fileID: 1202972203, guid: f56db59efa1ca4c4a81e7730041bdee5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1233,14 +1241,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1479257362
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479257358}
-  m_CullTransparentMesh: 1
 --- !u!1 &1511379710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,8 +1312,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1823618347}
   - component: {fileID: 1823618350}
-  - component: {fileID: 1823618349}
   - component: {fileID: 1823618348}
+  - component: {fileID: 1823618351}
   m_Layer: 5
   m_Name: ButtonPlay
   m_TagString: Untagged
@@ -1337,8 +1337,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 117, y: 37}
-  m_SizeDelta: {x: 120, y: 40}
+  m_AnchoredPosition: {x: 117.2, y: 21.7}
+  m_SizeDelta: {x: 47.4711, y: 8.8436}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1823618348
 MonoBehaviour:
@@ -1380,7 +1380,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1823618349}
+  m_TargetGraphic: {fileID: 1823618351}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -1408,7 +1408,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1823618349
+--- !u!222 &1823618350
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823618346}
+  m_CullTransparentMesh: 1
+--- !u!114 &1823618351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1428,7 +1436,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3efa8b9a7ecc0fe4dbc31093bb3b6407, type: 3}
+  m_Sprite: {fileID: 837325947, guid: 3efa8b9a7ecc0fe4dbc31093bb3b6407, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1438,14 +1446,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1823618350
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823618346}
-  m_CullTransparentMesh: 1
 --- !u!1 &1951560023
 GameObject:
   m_ObjectHideFlags: 0
