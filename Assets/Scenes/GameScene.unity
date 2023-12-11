@@ -691,7 +691,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lamp: {fileID: 728475657}
-  enemy: []
+  enemy:
+  - {fileID: 825729360}
+  - {fileID: 1686305042}
 --- !u!65 &309370292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4268,7 +4270,7 @@ MonoBehaviour:
   lampCount: 2
   cameraTransform: {fileID: 1989555200}
   anim: {fileID: 928455150}
-  StepAudio: {fileID: 0}
+  StepAudio: {fileID: 8300000, guid: c41fb169b2991c247a5466e00faa6639, type: 3}
 --- !u!143 &928455145
 CharacterController:
   m_ObjectHideFlags: 0
@@ -7099,7 +7101,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484544839}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0056970785, y: 0.986463, z: -0.16008088, w: 0.035106987}
+  m_LocalRotation: {x: 0.0056970795, y: 0.986463, z: -0.1600809, w: 0.035106987}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8148,7 +8150,7 @@ Transform:
   m_GameObject: {fileID: 1711014537}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.75, y: 0, z: -7.68}
+  m_LocalPosition: {x: -35.4, y: 0, z: -10.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9313,7 +9315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1868024847
 Transform:
   m_ObjectHideFlags: 0
